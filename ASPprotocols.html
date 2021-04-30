@@ -68,7 +68,29 @@
          <p>The Alonso S. Perales Correspondence digital project uses <a href="https://kepler.gl/">Kepler Maps</a> to visualize the extent of Perales’ network. To do so, we selected a sampling of 77 envelopes, scanned them, and created metadata for them. The scanned images make up part of the Alonso S. Perales Collection on Recovering the US Hispanic Literary Heritage Digital Archives, (<a href="usldhrecovery.uh.edu/">usldhrecovery.uh.edu</a>), an Omeka site. </p>
          
          <p>We created a CSV with metadata from each envelope that included the following columns:  identifier, link (to the image on Omeka), title, sender name (if available), recipient name (Alonso S. Perales), year, description, sentLocation, receivedLocation, senderLat,  senderLat, senderLng, receiverLat, receiverLng. In cases of unknown senders, we used brackets: [Unknown]. </p>
-         <p>Once the CSV was ready, we dropped the CSV into Kepler to add the data to the map. If you want to experiment, you can load sample data directly from the Kepler site. Under layers, we made visible the sender and receiver as points, then added an arc to display the sender to receiver connection. After adjusting the colors in the map, we saved and exported the map, using Dropbox as storage. Kepler generated a permalink to the map from Dropbox, which we then embedded into the html website using a responsive iframe.   </p>
+         <p>Once the CSV was ready, we dropped the CSV into Kepler to add the data to the map. If you want to experiment, you can load sample data directly from the Kepler site. Under layers, we made visible the sender and receiver as points, then added an arc to display the sender to receiver connection. After adjusting the colors in the map, we saved and exported the map as html. (Another option is to select Dropbox as storage. Kepler will generate a permalink to the map from Dropbox, which you can then embedded into the html website using a responsive iframe.)   </p>
+      <p><ol>
+      <li>Create metadata CSV. </li>
+      <li>Visit  <a href="https://kepler.gl/">Kepler Maps</a>. Drag and drop CSV to add data to map.</li>
+      <li>[Basic] Sender should be set as Point. </li>
+      <li>Columns: Lat: senderLat and Lon: senderLng</li>
+      <li>ii.	Leave Altitude blank</li>
+      <li>Add Labels if desired and change font size/color.</li>
+      <li>[Basic] To create arcs, select Arc (you can also select Line, Gride, Polygon, etc. based on your data)</li>
+      <li>Columns (sources): Source Lat: float senderLat</li>
+      <li>Columns (sources): Source Lng: float senderLng</li>
+      <li>Columns (sources): Target Lat: float receiverLat</li>
+      <li>Columns (sources): Target Lng: float receiverLng</li>
+      <li>Select Colors for Source and Target</li>
+      <li>Select Strong weight, if needed.</li>
+      <li>Add additional filters, if needed.</li>
+      <li>Click export icon, click Export Map.</li>
+      <li>Choose map format (html or json)–this map was created using html.</li>
+      <li>Optional: Add Mapbox access token. Leave blank if you do not have one.</li>
+      <li>Choose Map Mode: Allow users to read the map.</li>
+      <li>IF you prefer to use DropBox storage instead of html export: Click Share Public URL, choose Dropbox as storage. You will have to authenticate this using your Dropbox credentials. Click Upload. Kepler will then create a permalink to the map. You can then add the map to a website by creating an iframe.</li>
+      </ol>
+   
          
   
     </div>
@@ -82,6 +104,8 @@
       
       <p><a href="https://docs.kepler.gl/docs/api-reference">Kepler Documentation</a></p>
       <p><a href="https://omeka.readthedocs.io/en/latest/">Omeka Developer Documentation</a></p>
+      <p><a href="https://drive.google.com/file/d/1wi_-CIjLSpg0ZUti-kK1s43jpD0o__sz/view?usp=sharing">Perales Correspondence Dataset (CSV)*</a></p>
+      <p>*Use of this data must be cited: US Latino Digital Humanities program. <i>Perales Correspondence Dataset.</i> Recovering the US Hispanic Literary Heritage/Arte Público Press. 2019.</p> 
       
       </p>
     </div>
