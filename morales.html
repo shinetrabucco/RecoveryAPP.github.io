@@ -57,6 +57,64 @@
     
   </header>
 
+  !DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flipbook</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="turn.min.js"></script>
+    <style>
+    body {
+            overflow:hidden:
+    }
+    #flipbook.page {
+        background:white;
+    }
+    </style>
+</head>
+<body>
+    <div id="mybook">
+	    <div>
+		    <h1>Page One</h1>
+	        <p>Todos Somos</p>
+	    </div>
+        <div>
+		    <h1>second</h1>
+            <p>Todos Somos</p>
+	    </div>
+	    <div>
+		    <h1>Yay, Page 3!</h1>
+            <p>Todos Somos</p>
+	    </div>
+	    <div>
+		    <h1>Yay, Page 4!</h1>
+            <p>Todos Somos <figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio
+        controls
+        src="/media/cc0-audio/t-rex-roar.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+</p>
+	    </div>
+    </div>
+
+    /* javascript for flipbook */
+    <script type="text/javascript">
+        $('flipbook').turn({
+            width:600,
+            height:400
+            page:1,
+            autoCenter: true,
+            duration:2000
+        })
+    </script>
+
+<body>
+</html>
+
  <!--Section: Contact v.2-->
 <section class="mb-4">
 
