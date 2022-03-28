@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+	<title>Familia Morales Scrapbook<title/>
+	<style type="text/css">
+		body{
+			overflow: hidden;
+			background:url ('bg.png');
+			backgroundsize-: 100% 100%;
+		}
+		#album{
+			width:600px;
+			height:500px;
+			margin:5% auto;
+		}
+		</style>
+		
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>Familia Morales Scrapbook</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,11 +31,19 @@
 </head>
 <body>
 	
-	
+<div>
+	<div id="album">
+	<div style="background-image: url(morf0001_001.jpg);" background-size: 1000% 100%;"></div>
+
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	
+<script src="turn.js"></script>
+<script>
+	$('#album').turn({gradients: true, acceleration: true});	     
+</script>
 	
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -62,10 +80,9 @@
 	
   <!-- Header - set the background image for the header in the line below -->
   <header class="py-5 bg-image-full" style="background-image: url('https://recoveryapp.github.io/collage.jpg');">
+	  
     
   </header>
-
-
 
  <!--Section: Contact v.2-->
 
