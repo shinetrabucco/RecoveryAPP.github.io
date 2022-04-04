@@ -4,6 +4,14 @@
 	<title>Familia Morales Scrapbook<title/>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="turn.min.js"></script>
+	<style>
+	body {
+		overflow:hidden;
+	}
+	#flipbook.page 	{
+		background: white;
+	}
+		</style>
 </head>
 <body>	
 	<div id="flipbook">
@@ -13,7 +21,7 @@
 		</div>
 		<div>
 			<h1>Second Page</h1>
-			<p>hello this is a page </p>
+			<p>hello this is a page</p>
 		</div>
 		<div>
 			<h1>Third Page</h1>
@@ -23,6 +31,15 @@
 			<h1>Fourth</h1>
 			<p>hello this is a page.</p>
 		</div>
-	</div>	      
+	</div>
+	
+	<script type="text/javascript">
+		$('flipbook').turn({
+			width:600,
+			height:400,
+			page:1,
+			autoCenter:true,
+			duration:2000
+			
 </body>
 </html>
